@@ -51,17 +51,13 @@ export default class App extends Component {
 
     onSwipeLeft = (gestureState) => {
         if (this.state.webviewUrl === PUMA_HOME_URL) {
-            setTimeout(() => {
                 this.setState({webviewUrl: PUMA_CAREER_URL})
-            }, 1000);
         }
     }
 
     onSwipeRight = (gestureState) => {
         if (this.state.webviewUrl === PUMA_CAREER_URL) {
-            setTimeout(() => {
                 this.setState({webviewUrl: PUMA_HOME_URL})
-            }, 1000);
         }
     }
 
@@ -84,7 +80,7 @@ export default class App extends Component {
                             </Text>
                         </View>
                     : null
-}
+                }
                 <WebView
                     source={{
                     uri: webviewUrl
